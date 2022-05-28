@@ -10,7 +10,7 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
-@Table(name = "posts")
+@Table(name = "tovari")
 public class Post {
 	
 	@Id
@@ -23,11 +23,8 @@ public class Post {
 	private String material;
 	private String color;
 	private Integer price;
-	@Column(name = "created_date", columnDefinition = "TIMESTAMP")
-	private LocalDate createdDate;
 
-	public Post() {
-	}
+
 
 	public Integer getId() {
 		return id;
@@ -35,9 +32,7 @@ public class Post {
 	public void setId(Integer id) {
 		this.id = id;
 	}
-	public void setCreatedDate(LocalDate createdDate) {
-		this.createdDate = createdDate;
-	}
+
 
 	public String getGabariti() {
 		return gabariti;

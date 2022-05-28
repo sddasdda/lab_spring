@@ -19,7 +19,7 @@ public class PostServiceImpl implements PostService{
 		return repository.findAll();
 	}
 	
-	public Post getPost(long id) {
+	public Post getPost(Integer id) {
 		return repository.getById(id);
 	}
 	
@@ -38,7 +38,6 @@ public class PostServiceImpl implements PostService{
 		post.setMaterial(material);
 		post.setColor(color);
 		post.setPrice(price);
-		post.setCreatedDate(LocalDate.now());
 		return repository.save(post);
 	}
 }

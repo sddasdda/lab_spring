@@ -1,9 +1,11 @@
 type Post {
-	id: ID!,
-	title: String,
-	author: String,
-	type: String,
-	createdDate: String
+    Categories: String,
+	gabariti: String,
+	ves: String,
+	proizvoditel: String,
+	material: String,
+	color: String,
+	price: Int,
 }
 
 type Query {
@@ -12,5 +14,11 @@ type Query {
 }
 
 type Mutation {
-	createPost(title: String!, author: String!, type: String): Post
+	createPost( Categories: String!,
+               	gabariti: String!,
+               	ves: String!,
+               	proizvoditel: String!,
+               	material: String!,
+               	color: String!,
+               	price: Int!,): Post
 }

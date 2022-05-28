@@ -19,7 +19,7 @@ public class PostQuery implements GraphQLQueryResolver {
 		return service.getAllPosts();
 	}
 	
-	public Post getPost(long id) {
+	public Post getPost(Integer id) {
 		return service.getPost(id);
 	}
 }
