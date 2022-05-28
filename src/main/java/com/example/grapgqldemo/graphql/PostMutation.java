@@ -10,7 +10,13 @@ import com.example.grapgqldemo.service.PostService;
 public class PostMutation implements GraphQLMutationResolver {
 	private PostService service;
 	
-	public Post createPost(String title, String author, String type) {
-		return service.createPost(title, author, type);
+	public Post createPost(String Categories,
+						   String gabariti,
+						   String ves,
+						   String proizvoditel,
+						   String material,
+						   String color,
+						   Integer price) {
+		return service.createPost(Categories, gabariti, ves,proizvoditel,material, color, price);
 	}
 }

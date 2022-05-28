@@ -23,11 +23,21 @@ public class PostServiceImpl implements PostService{
 		return repository.getById(id);
 	}
 	
-	public Post createPost(String title, String author, String type) {
+	public Post createPost(String Categories,
+						   String gabariti,
+						   String ves,
+						   String proizvoditel,
+						   String material,
+						   String color,
+						   Integer price) {
 		final Post post = new Post();
-		post.setTitle(title);
-		post.setAuthor(author);
-		post.setType(type);
+		post.setCategories(Categories);
+		post.setGabariti(gabariti);
+		post.setVes(ves);
+		post.setProizvoditel(proizvoditel);
+		post.setMaterial(material);
+		post.setColor(color);
+		post.setPrice(price);
 		post.setCreatedDate(LocalDate.now());
 		return repository.save(post);
 	}

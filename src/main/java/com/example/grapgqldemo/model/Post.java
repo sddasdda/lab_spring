@@ -15,42 +15,83 @@ public class Post {
 	
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private Long id;
-	private String title;
-	private String author;
-	private String type;
+	private Integer id;
+	private String Categories;
+	private String gabariti;
+	private String ves;
+	private String proizvoditel;
+	private String material;
+	private String color;
+	private Integer price;
 	@Column(name = "created_date", columnDefinition = "TIMESTAMP")
 	private LocalDate createdDate;
-	
-	public Long getId() {
+
+	public Post() {
+	}
+
+	public Integer getId() {
 		return id;
 	}
-	public void setId(Long id) {
+	public void setId(Integer id) {
 		this.id = id;
-	}
-	public String getTitle() {
-		return title;
-	}
-	public void setTitle(String title) {
-		this.title = title;
-	}
-	public String getAuthor() {
-		return author;
-	}
-	public void setAuthor(String author) {
-		this.author = author;
-	}
-	public String getType() {
-		return type;
-	}
-	public void setType(String type) {
-		this.type = type;
-	}
-	public LocalDate getCreatedDate() {
-		return createdDate;
 	}
 	public void setCreatedDate(LocalDate createdDate) {
 		this.createdDate = createdDate;
 	}
-	
+
+	public String getGabariti() {
+		return gabariti;
+	}
+
+	public void setGabariti(String gabariti) {
+		this.gabariti = gabariti;
+	}
+
+	public String getCategories() {
+		return Categories;
+	}
+
+	public void setCategories(String categories) {
+		Categories = categories;
+	}
+
+	public String getVes() {
+		return ves;
+	}
+
+	public void setVes(String ves) {
+		this.ves = ves;
+	}
+
+	public String getProizvoditel() {
+		return proizvoditel;
+	}
+
+	public void setProizvoditel(String proizvoditel) {
+		this.proizvoditel = proizvoditel;
+	}
+
+	public String getMaterial() {
+		return material;
+	}
+
+	public void setMaterial(String material) {
+		this.material = material;
+	}
+
+	public String getColor() {
+		return color;
+	}
+
+	public void setColor(String color) {
+		this.color = color;
+	}
+
+	public Integer getPrice() {
+		return price;
+	}
+
+	public void setPrice(Integer price) {
+		this.price = price;
+	}
 }
